@@ -5,7 +5,6 @@ import "./Home.scss";
 
 // Import MovieDB
 import MovieCard from "../components/MovieCard/MovieCard";
-import Navbar from "../components/Navbar/Navbar";
 
 const Home = () => {
   // States for movieData and searchInput
@@ -81,17 +80,27 @@ const Home = () => {
   return (
     <>
       <header>
-        <Navbar
-          sortingAscending={sortingAscending}
-          sortingDescending={sortingDescending}
-          sortingRate={sortingRate}
-          sortingAtoZ={sortingAtoZ}
-          sortingZtoA={sortingZtoA}
-          searchMovie={searchMovie}
-          reset={reset}
-          searchInput={searchInput}
-          setSearchInput={setSearchInput}
-        />
+        <nav>
+          <button onClick={sortingAscending}>Sort by Date Ascending</button>
+          <button onClick={sortingDescending}>Sort by Date Descending</button>
+          <button onClick={sortingRate}>Sort by Rate</button>
+          <button onClick={sortingAtoZ}>A-Z</button>
+          <button onClick={sortingZtoA}>Z-A</button>
+        </nav>
+        <div className="search">
+          <form>
+            <input
+              type="text"
+              placeholder="Search for Movies"
+              value={searchInput}
+              onChange={(e) => {
+                setSearchInput(e.target.value);
+              }}
+            />
+          </form>
+          <button onClick={searchMovie}>Search</button>
+          <button onClick={reset}>Reset</button>
+        </div>
       </header>
       <main>
         <section className="output">
