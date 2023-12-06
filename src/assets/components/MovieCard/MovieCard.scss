@@ -1,0 +1,19 @@
+.movieCard__wrapper {
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  max-width: 100%;
+  padding: 1em;
+
+  .movieCard_titel {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 16px;
+    padding-top: 8px;
+  }
+
+  .data {
+    color: lightgray;
+  }
+}

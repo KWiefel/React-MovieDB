@@ -1,0 +1,66 @@
+header {
+  padding: 1em;
+  padding-top: 2em;
+  border-bottom: 1px solid black;
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    button {
+      padding: 0.5em 1em;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      border: 1px solid black;
+
+      &:hover {
+        color: inherit;
+        background-color: inherit;
+        border: 1px solid black;
+      }
+    }
+  }
+
+  .search {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+
+    form {
+      input {
+        padding: 0.5em 1em;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        min-width: 80%;
+      }
+    }
+    button {
+      padding: 0.5em 1em;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      border: 1px solid black;
+
+      &:hover {
+        color: inherit;
+        background-color: inherit;
+        border: 1px solid black;
+      }
+    }
+  }
+}
+
+main {
+  .output {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2% 5%;
+    gap: 16px;
+  }
+}
